@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns7:ontology_catalog xmlns:ns7="http://www.i2b2.org/xsd/cell/ont/1.1/" >
+	<ontology>
+		<display_name>PCORNET Demographics</display_name>
+		<description> File is '|' delimited; first row specifies column headings
+Strings are quoted with the ' " ' identifier
+A single root node of PCORNET Demographics is specified </description>
+		<URL>https://raw.githubusercontent.com/SCIHLS/scilhs-ontology/master/MetadataLoader/MetadataFiles/pconet_demo.zip</URL>
+		<file_name>dropins/PCORNET_DEMO.zip</file_name>
+		<table_name>PCORNET_DEMO</table_name>
+		<version>1.5.2</version>
+		<source>SCIHLS</source>
+		<fileType>zip</fileType>
+		<file_creation_date>2016-03-14</file_creation_date>
+		<contact>Lori Phillips (lcphillips@partners.org)</contact>
+	</ontology>
+		<ontology>
+		<display_name>PCORNET Diagnoses</display_name>
+		<description>ile is '|' delimited; first row specifies column headings
+Strings are quoted with the ' " ' identifier
+A single root node name of PCORNET Diagnoses was specified
+</description>
+		<URL>http://</URL>
+		<file_name>dropins/PCORNET_DIAG.zip</file_name>
+		<table_name>PCORNET_DIAG</table_name>
+		<version>1.5.2</version>
+		<source>SCIHLS</source>
+		<file_type>zip</file_type>
+		<file_creation_date>2016-03-14</file_creation_date>
+		<contact>Lori Phillips (lcphillips@partners.org)</contact>
+	</ontology>
+    <ontology>
+		<display_name>PCORNET Encounters</display_name>
+		<description> File is '|' delimited; first row specifies column headings
+Strings are quoted with the ' " ' identifier
+A single root node of PCORNET Encounters is specified </description>
+		<URL>http://</URL>
+		<file_name>dropins/PCORNET_ENC.zip</file_name>
+		<table_name>PCORNET_ENC</table_name>
+		<version>1.5.2</version>
+		<source>SCIHLS</source>
+		<fileType>zip</fileType>
+		<file_creation_date>2016-03-14</file_creation_date>
+		<contact>Lori Phillips (lcphillips@partners.org)</contact>
+	</ontology>
+		<ontology>
+		<display_name>PCORNET Enrollment</display_name>
+		<description>ile is '|' delimited; first row specifies column headings
+Strings are quoted with the ' " ' identifier
+A single root node name of PCORNET Enrollment was specified
+</description>
+		<URL>http://</URL>
+		<file_name>dropins/PCORNET_ENROLL.zip</file_name>
+		<table_name>PCORNET_ENROLL</table_name>
+		<version>1.5.2</version>
+		<source>SCIHLS</source>
+		<file_type>zip</file_type>
+		<file_creation_date>2016-03-14</file_creation_date>
+		<contact>Lori Phillips (lcphillips@partners.org)</contact>
+	</ontology>
+	<ontology>
+		<display_name>PCORNET Labs (v2)</display_name>
+		<description> File is '|' delimited; first row specifies column headings
+Strings are quoted with the ' " ' identifier
+A single root node of PCORNET Labs (v2) is specified </description>
+		<URL>http://</URL>
+		<file_name>dropins/PCORNET_LAB.zip</file_name>
+		<table_name>PCORNET_LAB</table_name>
+		<version>1.5.2</version>
+		<source>SCIHLS</source>
+		<fileType>zip</fileType>
+		<file_creation_date>2016-03-14</file_creation_date>
+		<contact>Lori Phillips (lcphillips@partners.org)</contact>
+	</ontology>
+		<ontology>
+		<display_name>PCORNET Medication (v3)</display_name>
+		<description>ile is '|' delimited; first row specifies column headings
+Strings are quoted with the ' " ' identifier
+A single root node name of PCORNET Medication (v3) was specified
+</description>
+		<URL>http://</URL>
+		<file_name>dropins/PCORNET_MED.zip</file_name>
+		<table_name>PCORNET_MED</table_name>
+		<version>1.5.2</version>
+		<source>SCIHLS</source>
+		<file_type>zip</file_type>
+		<file_creation_date>2016-03-14</file_creation_date>
+		<contact>Lori Phillips (lcphillips@partners.org)</contact>
+	</ontology>
+    <ontology>
+		<display_name>PCORNET Procedures</display_name>
+		<description> File is '|' delimited; first row specifies column headings
+Strings are quoted with the ' " ' identifier
+A single root node of PCORNET Procedures is specified </description>
+		<URL>http://</URL>
+		<file_name>dropins/PCORNET_PROC.zip</file_name>
+		<table_name>PCORNET_PROC</table_name>
+		<version>1.5.2</version>
+		<source>SCIHLS</source>
+		<fileType>zip</fileType>
+		<file_creation_date>2016-03-14</file_creation_date>
+		<contact>Lori Phillips (lcphillips@partners.org)</contact>
+	</ontology>
+		<ontology>
+		<display_name>PCORNET Vital Signs</display_name>
+		<description>ile is '|' delimited; first row specifies column headings
+Strings are quoted with the ' " ' identifier
+A single root node name of PCORNET Vital Signs was specified
+</description>
+		<URL>http://</URL>
+		<file_name>dropins/PCORNET_VITAL.zip</file_name>
+		<table_name>PCORNET_VITAL</table_name>
+		<version>1.5.2</version>
+		<source>SCIHLS</source>
+		<file_type>zip</file_type>
+		<file_creation_date>2016-03-14</file_creation_date>
+		<contact>Lori Phillips (lcphillips@partners.org)</contact>
+	</ontology>
+</ns7:ontology_catalog>
