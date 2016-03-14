@@ -5,7 +5,7 @@
 		<description> File is '|' delimited; first row specifies column headings
 Strings are quoted with the ' " ' identifier
 A single root node of PCORNET Demographics is specified </description>
-		<URL>https://raw.githubusercontent.com/SCIHLS/scilhs-ontology/master/MetadataLoader/MetadataFiles/pconet_demo.zip</URL>
+		<URL>https://raw.githubusercontent.com/SCILHS/scilhs-ontology/master/MetadataLoader/MetadataFiles/pconet_demo.zip</URL>
 		<file_name>dropins/PCORNET_DEMO.zip</file_name>
 		<table_name>PCORNET_DEMO</table_name>
 		<version>1.5.2</version>
