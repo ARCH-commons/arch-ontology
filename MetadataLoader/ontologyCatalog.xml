@@ -11,7 +11,7 @@ A single root node of PCORNET Demographics is specified </description>
 		<version>1.5.2</version>
 		<source>SCIHLS</source>
 		<fileType>zip</fileType>
-		<file_creation_date>2016-03-14</file_creation_date>
+		<file_creation_date>2016-03-15</file_creation_date>
 		<contact>Lori Phillips (lcphillips@partners.org)</contact>
 	</ontology>
 	<ontology>
@@ -19,13 +19,13 @@ A single root node of PCORNET Demographics is specified </description>
 		<description>File is '|' delimited; first row specifies column headings
 Strings are quoted with the ' " ' identifier
 A single root node name of PCORNET Diagnoses was specified</description>
-		<URL>http://</URL>
+		<URL>https://raw.githubusercontent.com/SCILHS/scilhs-ontology/master/MetadataLoader/MetadataFiles/pcornet_diag.zip</URL>
 		<file_name>dropins/PCORNET_DIAG.zip</file_name>
 		<table_name>PCORNET_DIAG</table_name>
-		<version>1.5.2</version>
+		<version>2.0.3</version>
 		<source>SCIHLS</source>
 		<file_type>zip</file_type>
-		<file_creation_date>2016-03-14</file_creation_date>
+		<file_creation_date>2016-03-15</file_creation_date>
 		<contact>Lori Phillips (lcphillips@partners.org)</contact>
 	</ontology>
     	<ontology>
@@ -33,10 +33,10 @@ A single root node name of PCORNET Diagnoses was specified</description>
 		<description> File is '|' delimited; first row specifies column headings
 Strings are quoted with the ' " ' identifier
 A single root node of PCORNET Encounters is specified </description>
-		<URL>http://</URL>
+		<URL>https://raw.githubusercontent.com/SCILHS/scilhs-ontology/master/MetadataLoader/MetadataFiles/pcornet_enc.zip</URL>
 		<file_name>dropins/PCORNET_ENC.zip</file_name>
 		<table_name>PCORNET_ENC</table_name>
-		<version>1.5.2</version>
+		<version>2.0.2</version>
 		<source>SCIHLS</source>
 		<fileType>zip</fileType>
 		<file_creation_date>2016-03-14</file_creation_date>
@@ -47,13 +47,13 @@ A single root node of PCORNET Encounters is specified </description>
 		<description>File is '|' delimited; first row specifies column headings
 Strings are quoted with the ' " ' identifier
 A single root node name of PCORNET Enrollment was specified</description>
-		<URL>http://</URL>
+		<URL>https://raw.githubusercontent.com/SCILHS/scilhs-ontology/master/MetadataLoader/MetadataFiles/pcornet_enroll.zip</URL>
 		<file_name>dropins/PCORNET_ENROLL.zip</file_name>
 		<table_name>PCORNET_ENROLL</table_name>
 		<version>1.5.2</version>
 		<source>SCIHLS</source>
 		<file_type>zip</file_type>
-		<file_creation_date>2016-03-14</file_creation_date>
+		<file_creation_date>2016-03-15</file_creation_date>
 		<contact>Lori Phillips (lcphillips@partners.org)</contact>
 	</ontology>
 	<ontology>
@@ -61,10 +61,10 @@ A single root node name of PCORNET Enrollment was specified</description>
 		<description> File is '|' delimited; first row specifies column headings
 Strings are quoted with the ' " ' identifier
 A single root node of PCORNET Labs (v2) is specified </description>
-		<URL>http://</URL>
+		<URL>https://raw.githubusercontent.com/SCILHS/scilhs-ontology/master/MetadataLoader/MetadataFiles/pcornet_lab.zip</URL>
 		<file_name>dropins/PCORNET_LAB.zip</file_name>
 		<table_name>PCORNET_LAB</table_name>
-		<version>1.5.2</version>
+		<version>2.0.3</version>
 		<source>SCIHLS</source>
 		<fileType>zip</fileType>
 		<file_creation_date>2016-03-14</file_creation_date>
@@ -75,10 +75,10 @@ A single root node of PCORNET Labs (v2) is specified </description>
 		<description>ile is '|' delimited; first row specifies column headings
 Strings are quoted with the ' " ' identifier
 A single root node name of PCORNET Medication (v3) was specified</description>
-		<URL>http://</URL>
+		<URL>https://raw.githubusercontent.com/SCILHS/scilhs-ontology/master/MetadataLoader/MetadataFiles/pcornet_med.zip</URL>
 		<file_name>dropins/PCORNET_MED.zip</file_name>
 		<table_name>PCORNET_MED</table_name>
-		<version>1.5.2</version>
+		<version>2.0.3</version>
 		<source>SCIHLS</source>
 		<file_type>zip</file_type>
 		<file_creation_date>2016-03-14</file_creation_date>
@@ -89,7 +89,7 @@ A single root node name of PCORNET Medication (v3) was specified</description>
 		<description> File is '|' delimited; first row specifies column headings
 Strings are quoted with the ' " ' identifier
 A single root node of PCORNET Procedures is specified </description>
-		<URL>http://</URL>
+		<URL>https://raw.githubusercontent.com/SCILHS/scilhs-ontology/master/MetadataLoader/MetadataFiles/pcornet_proc_nocpt.zip</URL>
 		<file_name>dropins/PCORNET_PROC.zip</file_name>
 		<table_name>PCORNET_PROC</table_name>
 		<version>1.5.2</version>
@@ -103,10 +103,10 @@ A single root node of PCORNET Procedures is specified </description>
 		<description>File is '|' delimited; first row specifies column headings
 Strings are quoted with the ' " ' identifier
 A single root node name of PCORNET Vital Signs was specified</description>
-		<URL>http://</URL>
+		<URL>https://raw.githubusercontent.com/SCILHS/scilhs-ontology/master/MetadataLoader/MetadataFiles/pcornet_vital.zip</URL>
 		<file_name>dropins/PCORNET_VITAL.zip</file_name>
 		<table_name>PCORNET_VITAL</table_name>
-		<version>1.5.2</version>
+		<version>2.0.3</version>
 		<source>SCIHLS</source>
 		<file_type>zip</file_type>
 		<file_creation_date>2016-03-14</file_creation_date>
