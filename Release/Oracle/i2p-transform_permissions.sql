@@ -3,8 +3,8 @@
 -- ASSUMES:
 -- SCILHS\i2p-transform/Oracle/PCORI_MEDS_SCHEMA_CHANGE_ora.sql > Do not run old version of this with ALTER TABLE commands!
 
--- 'I2B2DEMODATA' is name of stock i2b2 CRC schema
-alter session set current_schema=I2B2DEMODATA;
+-- 'I2B2METADATA' is name of stock i2b2 ONT cell (I2B2METADATA schema)
+alter session set current_schema=I2B2METADATA;
 
 -- 'cdm' is name of user who needs access to 'CDM' schema
 grant all on PCORNET_DEMO to cdm;
