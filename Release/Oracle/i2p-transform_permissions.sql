@@ -2,8 +2,11 @@
 
 -- ASSUMES:
 -- SCILHS\i2p-transform/Oracle/PCORI_MEDS_SCHEMA_CHANGE_ora.sql > Do not run old version of this with ALTER TABLE commands!
--- 'cdm' is name of user in CDM v3 database or schema
 
+-- 'CDM' is name of schema
+alter session set current_schema=CDM;
+
+-- 'cdm' is name of user who needs access to 'CDM' schema
 grant all on PCORNET_DEMO to cdm;
 grant all on PCORNET_DIAG to cdm;
 grant all on PCORNET_MED to cdm;  
