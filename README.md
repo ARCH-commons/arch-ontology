@@ -33,6 +33,7 @@ The core ontology was originally generated from Dan Connolly's code to generate 
 Take a look at the documentation first if you like, or download the whole package:
 * [Zipfile download](https://github.com/SCILHS/scilhs-ontology/releases): The [full release](https://github.com/SCILHS/scilhs-ontology/releases), including pipe-delimited exports of the six ontology tables, documentation, and spreadsheets to assist in mapping. 
 * [Ontology Mapping Tool for PCORnet](https://community.i2b2.org/wiki/display/NCBO/PCORI+Mapping+Tools+version+1.0): The i2b2 ontology mapping tool, modified for PCORnet (not necessary, but useful if mapping a large number of terms from local codes).
+* [Ontology Mapper 1.1](https://community.i2b2.org/wiki/display/NCBO/Mapping+tools+version+1.1): The i2b2 ontology mapping tool, not modified for PCORnet, but supporting UMLS MetaMap.
 * [Wiki pages](https://github.com/SCILHS/scilhs-ontology/wiki):Additional documentation on the ontology implementation process
 * Enabling Patient-Centric Comparative Effectiveness Research in i2b2: A conference poster illustrating the mapping process at a high level.
 * SHRINE support files: Coming soon...
