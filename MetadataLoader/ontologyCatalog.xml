@@ -1,17 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ns7:ontology_catalog xmlns:ns7="http://www.i2b2.org/xsd/cell/ont/1.1/" >
 	<ontology>
-		<display_name>PCORNET Demographics</display_name>
+		<display_name>PCORNET Demographics for SQLSERVER</display_name>
 		<description> File is '|' delimited; first row specifies column headings
 Strings are quoted with the ' " ' identifier
 A single root node of PCORNET Demographics is specified </description>
-		<URL>https://raw.githubusercontent.com/SCILHS/scilhs-ontology/master/MetadataLoader/MetadataFiles/pcornet_demo.zip</URL>
-		<file_name>dropins/PCORNET_DEMO.zip</file_name>
+		<URL>https://raw.githubusercontent.com/SCILHS/scilhs-ontology/master/MetadataLoader/MetadataFiles/pcornet_demo_sqlserver.zip</URL>
+		<file_name>dropins/PCORNET_DEMO_SQLSERVER.zip</file_name>
 		<table_name>PCORNET_DEMO</table_name>
 		<version>1.5.2</version>
 		<source>SCIHLS</source>
 		<fileType>zip</fileType>
-		<file_creation_date>2016-03-15</file_creation_date>
+		<file_creation_date>2016-04-08</file_creation_date>
+		<contact>Lori Phillips (lcphillips@partners.org)</contact>
+	</ontology>
+	<ontology>
+		<display_name>PCORNET Demographics for ORACLE</display_name>
+		<description> File is '|' delimited; first row specifies column headings
+Strings are quoted with the ' " ' identifier
+A single root node of PCORNET Demographics is specified </description>
+		<URL>https://raw.githubusercontent.com/SCILHS/scilhs-ontology/master/MetadataLoader/MetadataFiles/pcornet_demo_oracle.zip</URL>
+		<file_name>dropins/PCORNET_DEMO_ORACLE.zip</file_name>
+		<table_name>PCORNET_DEMO</table_name>
+		<version>1.5.2</version>
+		<source>SCIHLS</source>
+		<fileType>zip</fileType>
+		<file_creation_date>2016-04-08</file_creation_date>
 		<contact>Lori Phillips (lcphillips@partners.org)</contact>
 	</ontology>
 	<ontology>
@@ -92,10 +106,10 @@ A single root node of PCORNET Procedures is specified </description>
 		<URL>https://raw.githubusercontent.com/SCILHS/scilhs-ontology/master/MetadataLoader/MetadataFiles/pcornet_proc_nocpt.zip</URL>
 		<file_name>dropins/PCORNET_PROC.zip</file_name>
 		<table_name>PCORNET_PROC</table_name>
-		<version>1.5.2</version>
+		<version>2.0.4</version>
 		<source>SCIHLS</source>
 		<fileType>zip</fileType>
-		<file_creation_date>2016-03-14</file_creation_date>
+		<file_creation_date>2016-03-31</file_creation_date>
 		<contact>Lori Phillips (lcphillips@partners.org)</contact>
 	</ontology>
 	<ontology>
