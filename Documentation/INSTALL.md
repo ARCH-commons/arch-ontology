@@ -4,7 +4,7 @@
 
 # Included Documentation Files
 
-** INSTALL.md:** This file, explaining the installation process
+**INSTALL.md:** This file, explaining the installation process
 
 **SCILHS i2b2 CDM Mapping Documentation.pdf:** Document the mechanism for creating local mappings. 
 
