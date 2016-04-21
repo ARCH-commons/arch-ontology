@@ -132,3 +132,41 @@ DEALLOCATE getsql;
 end
 
 
+-----------------------------------------------------------------------------------------------------------------
+-- Procedure to fix ontology dimcodes, paths, and symbols
+-- Should not cause harm to table unless you've done something non-standard
+-- @table - table to update
+-- Jeffrey Klann, PhD - 4/21/16
+-----------------------------------------------------------------------------------------------------------------
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'FixOntology') AND type in (N'P', N'PC'))
+DROP PROCEDURE FixOntologyDPS
+GO
+
+create procedure dbo.FixOntologyDPS (@table varchar(50)) as 
+
+BEGIN 
+
+DECLARE @sqlstr nvarchar(1000);
+
+-- Reup the dimcodes after changes
+SET @sqlstr = 'update '+ @table+ ' set c_dimcode=c_fullname where c_operator=''LIKE'''
+;
+execute sp_executesql @sqlstr
+;
+
+-- Path and symbol updater
+-- Update c_path to match the required format
+SET @sqlstr = 'update  ' +@table+ '  set c_path=substring(c_fullname,0,len(c_fullname)-charindex(''\'',reverse(substring(c_fullname,1,len(C_FULLNAME)-1)))+1)'
+; execute sp_executesql @sqlstr ;
+-- SET @sqlstr = 'update c_symbol 
+SET @sqlstr = 'update  ' +@table+ '  set c_symbol=substring(c_fullname,len(c_fullname)-charindex(''\'',reverse(substring(c_fullname,1,len(C_FULLNAME)-1)))+1,50)'
+; execute sp_executesql @sqlstr ;
+SET @sqlstr = 'update  ' +@table+ '  set c_symbol=substring(c_symbol,1,len(C_SYMBOL)-1)'
+; execute sp_executesql @sqlstr ;
+
+
+END
+GO
+
+
