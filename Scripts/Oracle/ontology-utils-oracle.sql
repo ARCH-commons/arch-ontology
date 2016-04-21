@@ -1,4 +1,9 @@
+-- Ontology utilities for Oracle
+-- Only the concept dimension updater has been translated, and it is an old version. 
+-- Would someone please port the rest of the utilities?
+-- Jeffrey Klann, PhD
 
+-----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -- Procedure to update concept dimension for Oracle 
 -- Note that Modifier Dimension is not finished but should be an easy project
