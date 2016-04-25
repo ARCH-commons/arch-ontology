@@ -86,7 +86,7 @@ A single root node of PCORNET Labs (v2) is specified </description>
 	</ontology>
 	<ontology>
 		<display_name>PCORNET Medication (v3)</display_name>
-		<description>ile is '|' delimited; first row specifies column headings
+		<description> File is '|' delimited; first row specifies column headings
 Strings are quoted with the ' " ' identifier
 A single root node name of PCORNET Medication (v3) was specified</description>
 		<URL>https://raw.githubusercontent.com/SCILHS/scilhs-ontology/master/MetadataLoader/MetadataFiles/pcornet_med.zip</URL>
@@ -95,7 +95,7 @@ A single root node name of PCORNET Medication (v3) was specified</description>
 		<version>2.0.3</version>
 		<source>SCIHLS</source>
 		<file_type>zip</file_type>
-		<file_creation_date>2016-03-14</file_creation_date>
+		<file_creation_date>2016-04-25</file_creation_date>
 		<contact>Lori Phillips (lcphillips@partners.org)</contact>
 	</ontology>
     	<ontology>
