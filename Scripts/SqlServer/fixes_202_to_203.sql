@@ -1,7 +1,7 @@
 -- Update SCILHS CDM Ontology 2.0.2 to 2.0.3
 -- Jeff Klann, PhD ; 12/18/15
 
--- Med modifiers have incorrect c_columndatatype
+-- Med modifiers have incorrect c_columndatatype (should be 'T')
 -- Med modifier type DI is incorrect
 -- Prevnar pediatric suspension had a null hlevel (in meds)
 -- No script provided! - You must change these manually.

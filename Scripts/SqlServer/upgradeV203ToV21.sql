@@ -8,8 +8,8 @@
 --NOTE: This script alters data structures - it should be carefully reviewed before using
 --      and it is best if each statement is run separately
 -- Instructions:
--- 1) Run PCORI_MEDS_SCHEMA_CHANGE if you haven't already
--- 2) Run SCILHS_UTILS to get updated stored procedures
+-- 1) Run PCORI_MEDS_SCHEMA_CHANGE if you haven't already (see the i2p-transform project on GitHub.)
+-- 2) Run ONTOLOGY-UTILS-[platform].SQL to get updated stored procedures (in the same directory as this file on GitHub)
 -- 3) BACKUP!
 -- 4) Run the first line of the script to delete the old ICD-10 Procedures (note that you will have to reincorporate your mappings if you have mapped them)
 -- 5) Import the ICD-10-PCS-SCILHS procedures file.
