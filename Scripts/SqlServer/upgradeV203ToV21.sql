@@ -1,7 +1,8 @@
 ---------------------------------------------------------------------------------------------------
--- Upgrade ontology from 2.0.4 to 2.1 - MSSQL
+-- Upgrade ontology from 2.0.4 to 2.1.1 - MSSQL
 ---------------------------------------------------------------------------------------------------
 -- Jeff Klann, PhD 
+-- Version 1.1 - 2016-06-29
 -- Version 1.0 - 2016-04-21
 -- This upgrades an existing SCILHS ontology. You can instead simply import the new ontology files.
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -12,9 +13,10 @@
 -- 2) Run ONTOLOGY-UTILS-[platform].SQL to get updated stored procedures (in the same directory as this file on GitHub)
 -- 3) BACKUP!
 -- 4) Run the first line of the script to delete the old ICD-10 Procedures (note that you will have to reincorporate your mappings if you have mapped them)
--- 5) Import the ICD-10-PCS-SCILHS procedures file.
--- 6) Run the rest of this script, preferably a step at a time
--- 7) Update your concept dimension, via dbo.FixConceptDim
+-- 5) Run the line toward the end (in the 2.1.1 section) to delete old ICD-10 Diagnoses (note that you will have to reincorporate your mappings if you have mapped them)
+-- 6) Import the ICD-10-PCS-SCILHS procedures file and the ICD-10-CM-SCILHS diagnoses file.
+-- 7) Run the rest of this script, preferably a step at a time
+-- 8) Update your concept dimension, via dbo.FixConceptDim
 
 -- Clear out the old ICD-10-PCS
 -- IMPORTANT: Import the new one manually!
@@ -111,3 +113,13 @@ GO
 dbo.SetVersion 'pcornet_proc','2.1'
 GO
 
+--- 2.1 to 2.1.1 ----
+
+-- Clear out the old ICD-10-CM Diagnoses
+-- IMPORTANT: Import the new one manually!
+-- Note that you will have to copy your ICD-9 mappings to this tree, as well as re-import your ICD-10-CM mappings
+delete from pcornet_diag where c_fullname like '\PCORI\DIAGNOSIS\10\%' 
+GO
+
+dbo.SetVersion 'pcornet_diag','2.1.1'
+GO
