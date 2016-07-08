@@ -2,6 +2,7 @@
 -- Upgrade ontology from 2.0.4 to 2.1.1 - MSSQL
 ---------------------------------------------------------------------------------------------------
 -- Jeff Klann, PhD 
+-- Version 1.2 - 2016-07-08
 -- Version 1.1 - 2016-06-29
 -- Version 1.0 - 2016-04-21
 -- This upgrades an existing SCILHS ontology. You can instead simply import the new ontology files.
@@ -13,10 +14,11 @@
 -- 2) Run ONTOLOGY-UTILS-[platform].SQL to get updated stored procedures (in the same directory as this file on GitHub)
 -- 3) BACKUP!
 -- 4) Run the first line of the script to delete the old ICD-10 Procedures (note that you will have to reincorporate your mappings if you have mapped them)
--- 5) Run the line toward the end (in the 2.1.1 section) to delete old ICD-10 Diagnoses (note that you will have to reincorporate your mappings if you have mapped them)
+-- NEW! 5) Run the line toward the end (in the 2.1.1 section) to delete old ICD-10 Diagnoses (note that you will have to reincorporate your mappings if you have mapped them)
 -- 6) Import the ICD-10-PCS-SCILHS procedures file and the ICD-10-CM-SCILHS diagnoses file.
--- 7) Run the rest of this script, preferably a step at a time
--- 8) Update your concept dimension, via dbo.FixConceptDim
+-- NEW! 7) Import the age-at-visit tree into the PCORNET_ENC table.
+-- 8) Run the rest of this script, preferably a step at a time
+-- 9) Update your concept dimension, via dbo.FixConceptDim
 
 -- Clear out the old ICD-10-PCS
 -- IMPORTANT: Import the new one manually!
@@ -121,5 +123,19 @@ GO
 delete from pcornet_diag where c_fullname like '\PCORI\DIAGNOSIS\10\%' 
 GO
 
+-- There were stll some ages that should have been hidden
+update pcornet_demo set c_visualattributes=replace(C_VISUALATTRIBUTES,'A','I') where c_fullname like '\PCORI\DEMOGRAPHIC\Age\>= 85 years old\%' and c_hlevel=4
+GO
+update pcornet_demo set c_visualattributes=replace(C_VISUALATTRIBUTES,'A','I') where c_fullname like '\PCORI\DEMOGRAPHIC\Age\>= 65 years old\9%' and c_hlevel=4
+GO
+update pcornet_demo set c_visualattributes=replace(C_VISUALATTRIBUTES,'A','I') where c_fullname like '\PCORI\DEMOGRAPHIC\Age\>= 65 years old\1%' and c_hlevel=4
+GO
+
+-- Please also import the age-at-visit tree into the encounter table.
+
 dbo.SetVersion 'pcornet_diag','2.1.1'
+GO
+dbo.SetVersion 'pcornet_demo','2.1.1'
+GO
+dbo.SetVersion 'pcornet_enc','2.1.1'
 GO

@@ -1,5 +1,5 @@
 # SCILHS i2b2 PCORnet Common Data Model (CDM) 
-## Version 2.1 - 4/2016
+## Version 2.1.1 - 7/2016
 ##Jeff Klann, PhD
 
 # Included Documentation Files
