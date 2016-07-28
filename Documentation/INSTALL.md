@@ -12,7 +12,7 @@
 
 ## Installing the ontology 
 
-1. The ontology is broken down into eight tables. You will need to create these tables using the standard ontology table structure with an added PCORI_BASECODE column and PCORNET_SPECIMEN_SOURCE in the labs table. You will also need to add indexes.
+1. The ontology is broken down into eight tables. These tables use the standard ontology table structure with an added PCORI_BASECODE column and PCORNET_SPECIMEN_SOURCE in the labs table.
 **In the Scripts folder, run the create_*_metadata_tables.sql file for your database type.**
 
 2. The ontology is supplied as a set of pipe-delimited files, named pcornet_*.txt. Strings are double-quoted and null values are empty. There are no linebreaks in the strings, and all characters are standard ASCII. 
