@@ -16,6 +16,7 @@
 **In the Scripts folder, run the create_*_metadata_tables.sql file for your database type.**
 
 2. The ontology is supplied as a set of pipe-delimited files, named pcornet_*.txt. Strings are double-quoted and null values are empty. There are no linebreaks in the strings, and all characters are standard ASCII. 
+**Make sure to download the text files by clicking on the .txt file in Github, then click on the 'RAW' tab above the file text. Last, right click the raw formatted file and save to your preferred directory. If you fail to do this and just save-as before going to the raw format, the data import will fail.**
 ** Import the ontology files into separate tables named according to the file names. ** (These are the tables created in step 1 above.)
 Note that the ontology contains one non-standard column, PCORI_BASECODE, and the pcornet_lab table has another: PCORI_SPECIMEN_SOURCE
 
