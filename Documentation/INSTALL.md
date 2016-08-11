@@ -54,6 +54,18 @@ Note that the ontology contains one non-standard column, PCORI_BASECODE, and the
 6. ** NEW STEP **: The age-at-visit tree that has been added to the Encounters table in 2.1.1 must be configured to point to your database. Please run the following code, replacing [mydb] with the database name you are using. In Oracle, also remove the ".dbo". 
  `update pcornet_enc set c_dimcode=replace(C_DIMCODE,’PCORI_Dev.dbo.','[mydb].dbo.') where c_dimcode like '((select birth%'`
 
+Also, run the following code block in order to add these expected columns to the visit_dimension table:
+SQL code to add the columns (in MSSQL format) is below:
+```
+ALTER TABLE [dbo].[VISIT_DIMENSION]
+ADD [DRG] varchar(50) NULL,
+[DISCHARGE_STATUS] varchar(25) NULL,
+[DISCHARGE_DISPOSITION] varchar(25) NULL, [LOCATION_ZIP] varchar(25) NULL,
+[ADMITTING_SOURCE] varchar(25) NULL,
+[FACILITYID] varchar(25) NULL,
+[PROVIDERID] varchar(25) NULL
+```
+
 7. **Refresh your concept and modifier dimensions.** Stored procedures to do this are included in the refresh_dimensions script. All existing data is deleted and the tables are updated based on active tables in TABLE_ACCESS. You will need to modify these scripts if you use a separate database for the fact vs. ontology tables. Note also that the modifier dimension update script for Oracle is not finished. After running the script, execute the stored procedures. For example, in SqlServer, run:
 
 ```
