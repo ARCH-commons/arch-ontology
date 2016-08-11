@@ -62,7 +62,7 @@ ADD [DRG] varchar(50) NULL,
 [DISCHARGE_STATUS] varchar(25) NULL,
 [DISCHARGE_DISPOSITION] varchar(25) NULL, [LOCATION_ZIP] varchar(25) NULL,
 [ADMITTING_SOURCE] varchar(25) NULL,
-[FACILITY_ID] varchar(25) NULL,
+[FACILITYID] varchar(25) NULL,
 [PROVIDERID] varchar(25) NULL
 ```
 OR use the following code block for Oracle:
@@ -73,7 +73,7 @@ DISCHARGE_STATUS varchar(25) NULL,
 DISCHARGE_DISPOSITION varchar(25) NULL,
 LOCATION_ZIP varchar(25) NULL,
 ADMITTING_SOURCE varchar(25) NULL,
-FACILITY_ID varchar(25) NULL,
+FACILITYID varchar(25) NULL,
 PROVIDERID varchar(25) NULL);
 /
 ```
