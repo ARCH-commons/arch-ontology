@@ -25,9 +25,9 @@ BEGIN
  DECLARE @num INT
 
  SET @num=-2
- WHILE @num!=@el and CHARINDEX('\', @stringToSplit) > 0
+ WHILE @num!=@el and CHARINDEX(@delimeter, @stringToSplit) > 0
  BEGIN
-  SELECT @pos  = CHARINDEX('\', @stringToSplit)  
+  SELECT @pos  = CHARINDEX(@delimeter, @stringToSplit)  
   SELECT @name = SUBSTRING(@stringToSplit, 1, @pos-1)
 
   SELECT @stringToSplit = SUBSTRING(@stringToSplit, @pos+1, LEN(@stringToSplit)-@pos)
