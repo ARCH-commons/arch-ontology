@@ -2,6 +2,7 @@
 
 Below is a list of all lab types that need to be mapped. Each of these is a folder in the ontology with several LOINC codes. (Note that the tree also contains HIV tests, which are inactivated because queries on these data without specific approval is illegal in Massachusetts. You do not need to map these codes.) In alphabetical order:
 
+```
 Activated partial thromboplastin time (aptt) 
 Albumin
 ALP
@@ -81,3 +82,4 @@ Troponin T Cardiac (quantitative)
 Urate
 Urea nitrogen
 WBC Count
+```
