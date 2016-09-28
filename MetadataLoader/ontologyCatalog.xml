@@ -49,8 +49,8 @@ Strings are quoted with the ' " ' identifier
 A single root node of PCORNET Encounters is specified </description>
 		<URL>https://raw.githubusercontent.com/SCILHS/scilhs-ontology/master/MetadataLoader/MetadataFiles/pcornet_enc.zip</URL>
 		<file_name>dropins/PCORNET_ENC.zip</file_name>
-		<table_name>PCORNET_ENC_2_0_2</table_name>
-		<version>2.0.2</version>
+		<table_name>PCORNET_ENC_2_1_2</table_name>
+		<version>2.1.2</version>
 		<source>SCIHLS</source>
 		<fileType>zip</fileType>
 		<file_creation_date>2016-09-21</file_creation_date>
