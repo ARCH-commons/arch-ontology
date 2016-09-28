@@ -1,5 +1,5 @@
 # SCILHS i2b2 PCORnet Common Data Model (CDM) 
-## Version 2.1.1 - 7/2016
+## Version 2.1.2 - 9/2016
 ##Jeff Klann, PhD
 
 # Included Documentation Files
@@ -51,7 +51,7 @@ Note that the ontology contains one non-standard column, PCORI_BASECODE, and the
 
 5. In the Scripts directory, **run the ontology-utils-* script** for your database to get the stored procedure utilities.
 
-6. ** NEW STEP **: The age-at-visit tree that has been added to the Encounters table in 2.1.1 must be configured to point to your database. Please run the following code, replacing [mydb] with the database name you are using. In Oracle, also remove the ".dbo". 
+6. ** NEW STEP **: The age-at-visit tree that has been added to the Encounters table in 2.1.1 must be configured to point to your database. Please run the following code, replacing [mydb] with the database name you are using. In Oracle, also remove the ".dbo". **Note that some configurations work when removing the database name entirely (i.e. 'replacing [mydb].dbo.' with '')*
  `update pcornet_enc set c_dimcode=replace(C_DIMCODE,’PCORI_Dev.dbo.','[mydb].dbo.') where c_dimcode like '((select birth%'`
 
 Also, run the following code block in order to add these expected columns to the visit_dimension table:
