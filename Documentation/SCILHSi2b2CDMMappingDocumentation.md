@@ -70,6 +70,14 @@ In addition, if you have units in your fact table, make sure you enable unit con
 
 If you do not have units in your fact table, make sure the default unit in the metadata_xml field matches the units your data are stored in. Please do not change the default unit - it is assumed by SHRINE. If your data are not stored in this format, you will either need to convert your data or turn unit conversions on.
 
+Note that you should not map smoking status directly to "current smoker." Instead, map to a child of "current smoker":
+
+ * Current everyday smoker
+ * Current someday smoker
+ * Heavy tobacco smoker
+ * Light tobacco smoker
+ * Smoker, current status unknown
+
 
 See here for more information: https://community.i2b2.org/wiki/display/DevForum/Metadata+XML+for+Medication+Modifiers  
 
