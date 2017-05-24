@@ -180,6 +180,7 @@ end
 -----------------------------------------------------------------------------------------------------------------
 -- Procedure to update modifier dimension
 -- Jeffrey Klann, PhD - 4/21/16
+-- 5/8/17 - Update to support sourcesystem_cd mappings
 -----------------------------------------------------------------------------------------------------------------
 
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'FixModifierDim') AND type in (N'P', N'PC'))
@@ -193,7 +194,8 @@ create procedure dbo.FixModifierDim as
 DECLARE @sqltext NVARCHAR(4000);
 declare getsql cursor local for
 select 'insert into modifier_dimension ([modifier_path], [modifier_cd], [name_char], [modifier_blob], [update_date], [download_date], [import_date], [sourcesystem_cd], [upload_id]) 
-  select c_dimcode AS modifier_path, c_basecode AS modifier_cd, c_name AS name_char, c_comment AS modifier_blob, update_date, download_date, import_date, sourcesystem_cd, 1 upload_id from '
+  select c_dimcode AS modifier_path, c_basecode AS modifier_cd, c_name AS name_char, c_comment AS modifier_blob, update_date, download_date, import_date, 
+  CASE WHEN c_facttablecolumn=''sourcesystem_cd'' THEN c_basecode ELSE sourcesystem_cd END, 1 upload_id from '
 +c_table_name+'  where m_applied_path!=''@'' and c_tablename=''MODIFIER_DIMENSION'' and c_columnname=''modifier_path'' and (c_columndatatype=''T'' or c_columndatatype=''N'') and c_synonym_cd = ''N'' and (m_exclusion_cd is null or m_exclusion_cd='''') and c_basecode is not null'
 from TABLE_ACCESS where c_visualattributes like '%A%'
 

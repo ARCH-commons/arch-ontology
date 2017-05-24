@@ -35,3 +35,6 @@ with specimen as
 )
 update l set l.pcori_specimen_source=specimen.pcori_specimen_source from pcornet_lab l inner join specimen on specimen.c_fullname=l.c_fullname
 GO
+
+-- Find ontology codes that are probably not getting transformed (might or might not be a problem)
+select * from pcornet_master_vw where (pcori_basecode=c_symbol or pcori_basecode is null) and sourcesystem_cd!='PCORNET_CDM'
