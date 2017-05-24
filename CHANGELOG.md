@@ -1,29 +1,65 @@
-# SCILHS i2b2 PCORnet Common Data Model (CDM) - for SCILHS sites
-### Changelog### Jeff Klann, PhD
+# Change Log
 
-# GitHub Changelog
-
-## [Unreleased](https://github.com/SCILHS/scilhs-ontology/tree/HEAD)
-
-[Full Changelog](https://github.com/SCILHS/scilhs-ontology/compare/v2.0.2...HEAD)
+## [v3.1](https://github.com/SCILHS/scilhs-ontology/tree/v3.1) (2017-05-24)
+[Full Changelog](https://github.com/SCILHS/scilhs-ontology/compare/v2.0.2...v3.1)
 
 **Implemented enhancements:**
 
+- Add new CDMv3.1 elements [\#60](https://github.com/SCILHS/scilhs-ontology/issues/60)
+- Move C4 and HC to CH [\#59](https://github.com/SCILHS/scilhs-ontology/issues/59)
+- add basic support for loading ontology into Postgres [\#56](https://github.com/SCILHS/scilhs-ontology/issues/56)
+- SCHEMES is out of date [\#53](https://github.com/SCILHS/scilhs-ontology/issues/53)
+- Diagnosis: remove ICD-9 from ICD-10 tree? [\#49](https://github.com/SCILHS/scilhs-ontology/issues/49)
+- Encounter: Add Age at Visit tree [\#33](https://github.com/SCILHS/scilhs-ontology/issues/33)
+- Diagnosis ontology: ICD-10 tree upgrade [\#32](https://github.com/SCILHS/scilhs-ontology/issues/32)
+- Update ICD-10 diagnoses to be a crosswalk ontology. [\#28](https://github.com/SCILHS/scilhs-ontology/issues/28)
+- Update RxNorm ontology to newest version. [\#27](https://github.com/SCILHS/scilhs-ontology/issues/27)
+- Labs: consider all LOINC codes listed by PCORI [\#24](https://github.com/SCILHS/scilhs-ontology/issues/24)
+- Minor cleanup [\#23](https://github.com/SCILHS/scilhs-ontology/issues/23)
+- Release new pcornet\_med ontology with pcori\_ndc and pcori\_rxnorm [\#14](https://github.com/SCILHS/scilhs-ontology/issues/14)
+- Release new QT\_Breakdowns table [\#7](https://github.com/SCILHS/scilhs-ontology/issues/7)
 - Enrollment-based encounters should reference visit\_dimension [\#4](https://github.com/SCILHS/scilhs-ontology/issues/4)
 - Enviromental exposure might need to be smoking & non-smoking both [\#2](https://github.com/SCILHS/scilhs-ontology/issues/2)
 - Age \>85 should not be queryable individually! [\#1](https://github.com/SCILHS/scilhs-ontology/issues/1)
 
 **Fixed bugs:**
 
+- VITALS breakdown is wrong [\#54](https://github.com/SCILHS/scilhs-ontology/issues/54)
+- Medications 2.2: missing 78k NDC codes!  [\#43](https://github.com/SCILHS/scilhs-ontology/issues/43)
+- About 1200 codes don't have pcori\_ndc or pcori\_rxnorm  [\#42](https://github.com/SCILHS/scilhs-ontology/issues/42)
+- Diagnosis 2.1.2: wacky dimcodes [\#36](https://github.com/SCILHS/scilhs-ontology/issues/36)
+- Concept dimension: inactives in the diagnoses/ICD-10 tree should be included [\#35](https://github.com/SCILHS/scilhs-ontology/issues/35)
+- Demographics: large ages still queryable [\#34](https://github.com/SCILHS/scilhs-ontology/issues/34)
+- dbo.stringpart function doesn't use @delimiter arg [\#31](https://github.com/SCILHS/scilhs-ontology/issues/31)
+- Medications: several duplicates [\#30](https://github.com/SCILHS/scilhs-ontology/issues/30)
+- Diagnosis ontology: ENCTYPE [\#29](https://github.com/SCILHS/scilhs-ontology/issues/29)
 - concept\_dim updater skips hiddens but not inactives [\#25](https://github.com/SCILHS/scilhs-ontology/issues/25)
 - Diagnosis ontology: PDX [\#21](https://github.com/SCILHS/scilhs-ontology/issues/21)
 - meds and labs in scope now? README out of date? [\#20](https://github.com/SCILHS/scilhs-ontology/issues/20)
+- ICD-10 needs PCS and c\_name fixes [\#18](https://github.com/SCILHS/scilhs-ontology/issues/18)
 - Labs ontology: creatinine appears twice [\#16](https://github.com/SCILHS/scilhs-ontology/issues/16)
 - Labs ontology: duplicate codes with same fullname [\#15](https://github.com/SCILHS/scilhs-ontology/issues/15)
+- Ontology file import - literal "NULL" converted to actual null [\#13](https://github.com/SCILHS/scilhs-ontology/issues/13)
 - PCORI\_BASECODE incorrect for some principal discharge diagnosis flags [\#11](https://github.com/SCILHS/scilhs-ontology/issues/11)
+- Loading medication ontology with Oracle sqlldr results in error "column C\_TOOLTIP. second enclosure string not present" [\#10](https://github.com/SCILHS/scilhs-ontology/issues/10)
+- Update schemes table [\#6](https://github.com/SCILHS/scilhs-ontology/issues/6)
 - HIV RNA tests in labs should be hidden [\#5](https://github.com/SCILHS/scilhs-ontology/issues/5)
 - Hispanic R refuse to answer missing from ontology [\#3](https://github.com/SCILHS/scilhs-ontology/issues/3)
 - Age \\>85 should not be queryable individually! [\#1](https://github.com/SCILHS/scilhs-ontology/issues/1)
+
+**Closed issues:**
+
+- Medication ontology: SHRINE interop below ingredient level? [\#52](https://github.com/SCILHS/scilhs-ontology/issues/52)
+- Age at visit does work in oracle  [\#51](https://github.com/SCILHS/scilhs-ontology/issues/51)
+- need to correct metadata for non-hisppanic in demographics [\#50](https://github.com/SCILHS/scilhs-ontology/issues/50)
+- SCILHS ontology meta data tables do not include indexes for labs [\#48](https://github.com/SCILHS/scilhs-ontology/issues/48)
+- c\_fullname in pcornet\_lab fix. Connies issue \#3. [\#46](https://github.com/SCILHS/scilhs-ontology/issues/46)
+- 'Hispanic' demographic fix. Connies issue \#2. [\#45](https://github.com/SCILHS/scilhs-ontology/issues/45)
+- c\_tooltip in pcornet\_lab update. Connies Issue \#1. [\#44](https://github.com/SCILHS/scilhs-ontology/issues/44)
+- c\_dimcode needs a fix for several more pcornet\_agetree.txt rows [\#39](https://github.com/SCILHS/scilhs-ontology/issues/39)
+- How are the "D~s1uh" parts of Diagnosis paths computed? [\#38](https://github.com/SCILHS/scilhs-ontology/issues/38)
+- pcornet\_agetree weird c\_dimcode for Age 24 [\#37](https://github.com/SCILHS/scilhs-ontology/issues/37)
+- Same Dx and PX c\_basecodes [\#26](https://github.com/SCILHS/scilhs-ontology/issues/26)
 
 ## [v2.0.2](https://github.com/SCILHS/scilhs-ontology/tree/v2.0.2) (2015-12-16)
 [Full Changelog](https://github.com/SCILHS/scilhs-ontology/compare/*CDM ontology, first major update*...v2.0.2)
@@ -251,5 +287,6 @@
 -   Duplicates in labs table - removed
 
 -   Modified tooltip of DX\_SOURCE:FI to explain that Final can mean ambulatory.
+
 
 \* *This Change Log was automatically generated by [github_changelog_generator](https://github.com/skywinder/Github-Changelog-Generator)*
