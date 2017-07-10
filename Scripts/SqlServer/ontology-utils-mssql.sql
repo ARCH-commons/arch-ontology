@@ -146,6 +146,7 @@ END
 -- Procedure to update concept dimension
 -- Jeffrey Klann, PhD - 4/21/16
 -- BUGFIX from previous version - did not properly exclude inactives and include hiddens
+-- 6/1/17 UPDATE: Ignores ICD-9 dimcodes in I9-in-I10 tree if you've un-inactivated them
 -----------------------------------------------------------------------------------------------------------------
 
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'FixConceptDim') AND type in (N'P', N'PC'))
@@ -159,7 +160,7 @@ create procedure dbo.FixConceptDim as
 DECLARE @sqltext NVARCHAR(4000);
 declare getsql cursor local for
 select 'insert into concept_dimension select c_dimcode AS concept_path, c_basecode AS concept_cd, c_name AS name_char, null AS concept_blob, update_date AS update_date, download_date as download_date, import_date as import_date, sourcesystem_cd as sourcesystem_cd, 1 as upload_id from '
-+c_table_name+' where m_applied_path=''@'' and c_tablename=''CONCEPT_DIMENSION'' and c_columnname=''concept_path'' and c_visualattributes not like ''%I%'' and (c_columndatatype=''T'' or c_columndatatype=''N'') and c_synonym_cd = ''N'' and (m_exclusion_cd is null or m_exclusion_cd='''') and c_basecode is not null and c_basecode!='''''
++c_table_name+' where m_applied_path=''@'' and c_tablename=''CONCEPT_DIMENSION'' and c_columnname=''concept_path'' and c_visualattributes not like ''%I%'' and (c_columndatatype=''T'' or c_columndatatype=''N'') and c_synonym_cd = ''N'' and (m_exclusion_cd is null or m_exclusion_cd='''') and c_basecode is not null and c_basecode!='''' and sourcesystem_cd not like ''%(I9inI10)%'''
 from TABLE_ACCESS where c_visualattributes like '%A%'
 
 begin
@@ -251,9 +252,10 @@ end
 -- Should not cause harm to table unless you've done something non-standard
 -- @table - table to update
 -- Jeffrey Klann, PhD - 4/21/16
+-- 6/1/17 UPDATE: Mirrors ICD-9 dimcodes in I9-in-I10 tree
 -----------------------------------------------------------------------------------------------------------------
 
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'FixOntology') AND type in (N'P', N'PC'))
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'FixOntologyDPS') AND type in (N'P', N'PC'))
 DROP PROCEDURE FixOntologyDPS
 GO
 
@@ -265,6 +267,14 @@ DECLARE @sqlstr nvarchar(1000);
 
 -- Reup the dimcodes after changes
 SET @sqlstr = 'update '+ @table+ ' set c_dimcode=c_fullname where c_operator=''LIKE'''
+;
+execute sp_executesql @sqlstr
+;
+
+-- Set the I9-in-I10 dimcodes to be equivalent to ICD-9
+SET @sqlstr = 'update ten set c_dimcode=nine.c_dimcode from ' + @table + ' ten ' +
+ 'inner join '+@table+' nine on ten.pcori_basecode=nine.pcori_basecode where nine.sourcesystem_cd like ''NCBO%'' and ten.sourcesystem_cd like ''RPDR%'' '+
+ 'and ten.c_fullname like ''\PCORI\DIAGNOSIS\10\%'' and nine.c_fullname like ''\PCORI\DIAGNOSIS\09\%'' '
 ;
 execute sp_executesql @sqlstr
 ;
