@@ -273,7 +273,7 @@ execute sp_executesql @sqlstr
 
 -- Set the I9-in-I10 dimcodes to be equivalent to ICD-9
 SET @sqlstr = 'update ten set c_dimcode=nine.c_dimcode from ' + @table + ' ten ' +
- 'inner join '+@table+' nine on ten.pcori_basecode=nine.pcori_basecode where nine.sourcesystem_cd like ''NCBO%'' and ten.sourcesystem_cd like ''RPDR%'' '+
+ 'inner join '+@table+' nine on ten.pcori_basecode=nine.pcori_basecode where nine.sourcesystem_cd like ''NCBO%'' and ten.sourcesystem_cd=''RPDR_2015'' '+
  'and ten.c_fullname like ''\PCORI\DIAGNOSIS\10\%'' and nine.c_fullname like ''\PCORI\DIAGNOSIS\09\%'' '
 ;
 execute sp_executesql @sqlstr
