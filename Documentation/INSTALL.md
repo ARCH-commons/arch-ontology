@@ -78,7 +78,12 @@ PROVIDERID varchar(25) NULL);
 /
 ```
 
-7. **Refresh your concept and modifier dimensions.** Stored procedures to do this are included in the refresh_dimensions script. All existing data is deleted and the tables are updated based on active tables in TABLE_ACCESS. You will need to modify these scripts if you use a separate database for the fact vs. ontology tables. Note also that the modifier dimension update script for Oracle is not finished. After running the script, execute the stored procedures. For example, in SqlServer, run:
+7. **Import the updated QT_BREAKDOWN_PATH file.** This updated table is located in the SCILHS Ontology repository. Click the following link for a direct path to the MSSQL file:
+https://github.com/SCILHS/scilhs-ontology/blob/master/Ontology/QT_BREAKDOWN_PATH_MSSQL.txt
+
+
+
+8. **Refresh your concept and modifier dimensions.** Stored procedures to do this are included in the refresh_dimensions script. All existing data is deleted and the tables are updated based on active tables in TABLE_ACCESS. You will need to modify these scripts if you use a separate database for the fact vs. ontology tables. Note also that the modifier dimension update script for Oracle is not finished. After running the script, execute the stored procedures. For example, in SqlServer, run:
 
 ```
 exec dbo.FixConceptDim

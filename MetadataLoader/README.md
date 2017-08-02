@@ -1,3 +1,5 @@
+## This is *NOT* updated to the latest ontology release!
+
 To be used by the forthcoming i2b2 MetaData Loader, for easy first-time installation of ontology files...
 
 If you are not doing a first time installation,

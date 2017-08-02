@@ -26,15 +26,15 @@ delete from pcornet_proc where c_fullname like '\PCORI\PROCEDURE\10\%'
 GO
 
 -- Fix PCORI Code for PDX in diagnosis
-UPDATE [PCORI_Dev].[dbo].[pcornet_diag]
+UPDATE [pcornet_diag]
 SET [C_SYMBOL]='P', [PCORI_BASECODE]='P'
 WHERE [C_HLEVEL]=2 AND [C_FULLNAME]='\PCORI_MOD\PDX\P\' AND [C_NAME]='Principal' AND [C_BASECODE]='1'
 GO
-UPDATE [PCORI_Dev].[dbo].[pcornet_diag]
+UPDATE [pcornet_diag]
 SET [C_SYMBOL]='S', [PCORI_BASECODE]='S'
 WHERE [C_HLEVEL]=2 AND [C_FULLNAME]='\PCORI_MOD\PDX\S\' AND [C_NAME]='Secondary' AND [C_BASECODE]='2'
 GO
-UPDATE [PCORI_Dev].[dbo].[pcornet_diag]
+UPDATE [pcornet_diag]
 SET [C_SYMBOL]='X', [PCORI_BASECODE]='X'
 WHERE [C_HLEVEL]=2 AND [C_FULLNAME]='\PCORI_MOD\PDX\X\' AND [C_NAME]='Unable to classify' AND [C_BASECODE]='0'
 GO
@@ -89,7 +89,7 @@ update pcornet_diag set c_visualattributes=substring(c_visualattributes,1,1)+'AE
 GO
 
 -- Passive/environment tobacco exposure in wrong place
-UPDATE [PCORI_Dev].[dbo].[pcornet_vital]
+UPDATE [pcornet_vital]
 SET [C_HLEVEL]=3, [C_FULLNAME]='\PCORI\VITAL\TOBACCO\04\', [C_DIMCODE]='\PCORI\VITAL\TOBACCO\04\', [C_PATH]='\PCORI\VITAL\TOBACCO\'
 WHERE [C_FULLNAME]='\PCORI\VITAL\TOBACCO\02\04\' AND [C_NAME]='Passive Or Environmental Exposure' AND [C_BASECODE]='TOBACCO:04'
 GO
