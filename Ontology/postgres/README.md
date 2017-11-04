@@ -1,5 +1,7 @@
 # Note: this is unsupported by ARCH (though we very much appreciate the contribution!) Use at your own risk.
 
+# Note #2: The ontology files needed to be removed temporarily and will be replaced soon.
+
 # Release notes: 
 ### 10/27/2017
 ### Institute for Informatics
