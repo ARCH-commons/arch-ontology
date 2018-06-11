@@ -4,8 +4,18 @@
 
 [Full Changelog](https://github.com/ARCH-commons/arch-ontology/compare/v3.1b...HEAD)
 
+**Implemented enhancements:**
+
+- PCORnet labs requirements have changed; ontology expansion needed [\#74](https://github.com/ARCH-commons/arch-ontology/issues/74)
+
+**Fixed bugs:**
+
+- PCORnet labs requirements have changed; ontology expansion needed [\#74](https://github.com/ARCH-commons/arch-ontology/issues/74)
+- QT\_BREAKDOWN\_PATH value for Age is inconsistent with PCORNET\_DEMO c\_fullname values [\#70](https://github.com/ARCH-commons/arch-ontology/issues/70)
+
 **Closed issues:**
 
+- Update ontology for CDM v4.1 [\#76](https://github.com/ARCH-commons/arch-ontology/issues/76)
 - create sql server metadata tables needs updating [\#75](https://github.com/ARCH-commons/arch-ontology/issues/75)
 
 **Merged pull requests:**
