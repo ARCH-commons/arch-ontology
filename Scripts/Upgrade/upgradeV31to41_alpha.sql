@@ -7,6 +7,7 @@
 1. Import NELexicon_Labs in the Ontology/ForUpgradingOnly folder into your lab ontology - this will add the new labs.
 2. Remove PDX:X and PX_SOURCE:OD from your procedures ontology.
 3. Remove the old DX_ORIGIN:OD from your diagnosis ontology.
+4. c_fullname should be 900 characters and c_basecode should have 100 or more (e.g. 450) characters.
 
 NOTE: *** THIS IS NOT FINISHED **** THE INSERT STATEMENTS ALL REFER TO A TABLE CALLED cdmv4. *** THIS SHOULD BE REPLACED WITH THE CORRECT ONTOLOGY TABLE ***
       *** FURTHER, THIS HAS NOT BEEN TESTED AT THIS TIME AND IS PROVIDED FOR USE AT YOUR OWN RISK! ***
