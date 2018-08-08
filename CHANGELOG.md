@@ -2,7 +2,27 @@
 
 ## [Unreleased](https://github.com/ARCH-commons/arch-ontology/tree/HEAD)
 
-[Full Changelog](https://github.com/ARCH-commons/arch-ontology/compare/v3.1b...HEAD)
+[Full Changelog](https://github.com/ARCH-commons/arch-ontology/compare/v4.1a...HEAD)
+
+**Implemented enhancements:**
+
+- Procedure table has useless no\_qualifier synonyms [\#83](https://github.com/ARCH-commons/arch-ontology/issues/83)
+
+**Fixed bugs:**
+
+- RX\_FREQUENCY valueset has changed [\#84](https://github.com/ARCH-commons/arch-ontology/issues/84)
+- Procedure table has useless no\\_qualifier synonyms [\#83](https://github.com/ARCH-commons/arch-ontology/issues/83)
+- DIMCODEs in PCORnet\_vital are wrong [\#82](https://github.com/ARCH-commons/arch-ontology/issues/82)
+- Wrong c\_tooltip for Principal Procedure and Spelling Mistake in c\_name and c\_tooltip [\#81](https://github.com/ARCH-commons/arch-ontology/issues/81)
+- Procedure PPX:S  [\#79](https://github.com/ARCH-commons/arch-ontology/issues/79)
+- Medication RX Quantity Unit [\#78](https://github.com/ARCH-commons/arch-ontology/issues/78)
+- Medication RX PRN Flag [\#77](https://github.com/ARCH-commons/arch-ontology/issues/77)
+
+## [v4.1a](https://github.com/ARCH-commons/arch-ontology/tree/v4.1a) (2018-08-08)
+[Full Changelog](https://github.com/ARCH-commons/arch-ontology/compare/v4.1...v4.1a)
+
+## [v4.1](https://github.com/ARCH-commons/arch-ontology/tree/v4.1) (2018-06-11)
+[Full Changelog](https://github.com/ARCH-commons/arch-ontology/compare/v3.1b...v4.1)
 
 **Implemented enhancements:**
 
