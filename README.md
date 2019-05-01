@@ -1,6 +1,6 @@
 # ARCH i2b2 PCORnet Common Data Model Ontology
 
-The Accessible Research Commons for Health (ARCH, formerely called SCILHS) is a network of 10 health centers across the United States that covers over 8 million patients. ARCH is a Clinical Data Research Network (CDRN) in the Patient-Centered Outcomes Research Institute's PCORnet.
+The Accessible Research Commons for Health (ARCH, formerly called SCILHS) is a network of 10 health centers across the United States that covers over 8 million patients. ARCH is a Clinical Data Research Network (CDRN) in the Patient-Centered Outcomes Research Institute's PCORnet.
 
 ARCH (with much help from others) has developed an i2b2 information model that represents the PCORnet Common Data Model (CDM). This information model consists of an i2b2 ontology/terminology and a process for mapping local data elements to the ontology without changing the underlying imported data. This approach highlights i2b2's ability to separate data model from both information model and the underlying data format.
 
